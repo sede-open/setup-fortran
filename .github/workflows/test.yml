@@ -57,6 +57,8 @@ jobs:
     
   test:
     name: Test
+    permissions:
+      contents: read
     needs: options
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ needs.options.outputs.mode == 'report' }}
